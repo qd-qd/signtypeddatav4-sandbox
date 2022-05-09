@@ -1,8 +1,12 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import WAGMIProvider from "../utils/WAGMIProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <WAGMIProvider>
+      <Component {...pageProps} />
+    </WAGMIProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
